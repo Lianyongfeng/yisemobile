@@ -1,0 +1,282 @@
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+html{
+    font-size: 62.5%;
+}
+html,body{
+    height: 100%;
+    overflow:hidden;
+    -webkit-overflow-scrolling: touch;
+}
+a{
+    text-decoration:none;
+    outline: none;
+    color: #000000;
+}
+a:hover{
+    text-decoration: none;
+}
+/*------------------------------------  字体---------------------------------------------------*/
+@font-face {
+    font-family:MyriadPro-Regular;
+    src: url("../font/MyriadPro-Regular.ttf");
+}
+.cover{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:rgba(62,90,72,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.turn{
+    width: 1.14rem;
+}
+.turn>img{
+    width: 100%;
+}
+.magazine-container{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+.magazine-container .swiper-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.magazine-container .swiper-wrapper .swiper-slide{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.magazine-button-prev{
+    position: fixed;
+    z-index: 25;
+    width: 0.43rem;
+    height: 0.23rem;
+    margin-left: -0.12rem;
+    top: 1rem;
+    left: 50%;
+    background: url("../img/magazine-prev.png");
+    background-size: 100%;
+}
+.magazine-button-next{
+    position: fixed;
+    z-index: 25;
+    width: 0.43rem;
+    height: 0.23rem;
+    margin-left: -0.12rem;
+    bottom: 1rem;
+    left: 50%;
+    background: url("../img/magazine-next.png");
+    background-size: 100%;
+}
+.magazine-container .swiper-wrapper .swiper-slide img{
+    width: 100%;
+}
+.tip{
+    width: 3.9rem;
+    height: 3.1rem;
+    position: fixed;
+    right: 0;
+    top: 0.6rem;
+    z-index: 20;
+    font-size: 0.16rem;
+}
+.tip .up{
+    width: 1.58rem;
+    height: 3.1rem ;
+    background: rgba(255,255,255,0.8);
+    position: absolute;
+    right: 0;
+
+}
+.tip .up .logo{
+    width: 0.86rem;
+    height: 0.32rem;
+    top: 0.3rem;
+    right: 0.4rem;
+    position: absolute;
+}
+.tip .up .logo img{
+    width: 100%;
+}
+.tip .up .arrow{
+    width: 0.13rem;
+    height: 0.16rem;
+    bottom: 0.3rem;
+    right: 0.4rem;
+    position: absolute;
+}
+.tip .up .arrow img{
+    width: 100%;
+}
+.tip .down{
+    position: absolute;
+    right: 0;
+    display: none;
+}
+.tip .down .top{
+    width: 1.58rem;
+    height: 3.1rem ;
+    background: rgba(255,255,255,0.8);
+    position: relative;
+}
+.tip .down .top .fork{
+    width: 0.27rem;
+    height: 0.27rem;
+    top: 0.3rem;
+    right: 0.4rem;
+    position: absolute;
+}
+.tip .down .top .fork img{
+    width: 100%;
+}
+.tip .down .top .logo{
+    width: 0.86rem;
+    height: 0.32rem;
+    bottom: 0.3rem;
+    right: 0.4rem;
+    position: absolute;
+}
+.tip .down .top .logo img{
+    width: 100%;
+}
+.tip .down .footer{
+    width: 3.1rem;
+    height: 2.2rem ;
+    background: rgba(255,255,255,0.8);
+    margin-right: 0.1rem ;
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg); 	/* IE 9 */
+    -moz-transform:rotate(90deg); 	/* Firefox */
+    -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+    -o-transform:rotate(90deg); 	/* Opera */
+    position: absolute;
+    right: 1.1rem;
+    top: 0.45rem;
+    font-size: 0.14rem;
+    padding: 0.3rem;
+    box-sizing: border-box;
+}
+.tip .down .footer h6{
+    font-family:MyriadPro-Regular;
+    font-size: 0.18rem;
+    font-weight: normal;
+    padding-left: 3%;
+    box-sizing: border-box;
+    background: #355541;
+    color: #ffffff;
+    vertical-align: middle;
+}
+.tip .down .footer p{
+    padding-top: 5%;
+    box-sizing: border-box;
+    position: relative;
+}
+.tip .down .footer p .left{
+    font-size:0.12rem;
+    bottom: 2%;
+    position: absolute;
+}
+.tip .down .footer p .right{
+    font-size: 0.12rem;
+    bottom: 2%;
+    right: 5%;
+    position: absolute;
+}
+.swiper-container-free-mode>.swiper-wrapper {
+    -webkit-transition-timing-function: linear;
+    -moz-transition-timing-function: linear;
+    -ms-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear;
+    margin: 0 auto;
+}
+.more-tip{
+    width: 0.82rem;
+    height: 1.13rem;
+    position: absolute;
+    left: 0.4rem;
+    top: 50%;
+    margin-top: -0.57rem;
+    z-index: 20;
+}
+.more-tip img{
+    width: 100%;
+}
+.small-wrapper{
+    position: absolute;
+    width: 1.4rem;
+    padding:1rem 0.22rem;
+    height: 100%;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.8);
+    left: 0;
+    z-index: 25;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+}
+.small-wrapper .small-container{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.small-wrapper .small-container .swiper-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.small-wrapper .small-container .swiper-wrapper .swiper-slide{
+    width:0.94rem;
+    height: 0.94rem;
+    text-align: center;
+}
+.small-wrapper .small-container .swiper-wrapper .swiper-slide img{
+    width: 100%;
+}
+.small-wrapper .small-left{
+    width: 0.27rem;
+    height: 0.17rem;
+    background: url("../img/small-prev.png") no-repeat;
+    background-size: 100%;
+    z-index: 20;
+    position: absolute;
+    top: 3%;
+    bottom: auto;
+    left: 0.58rem;
+}
+.small-wrapper .small-right{
+    width: 0.27rem;
+    height: 0.17rem;
+    background: url("../img/small-next.png") no-repeat;
+    background-size: 100%;
+    z-index: 20;
+    position: absolute;
+    bottom: 3%;
+    top: auto;
+    left: 0.58rem;
+}
+.small-wrapper .down-tip{
+    width: 0.36rem;
+    height: 0.36rem;
+    position: absolute;
+    left: 1.1rem;
+    z-index: 25;
+    top: 50%;
+    margin-top: -0.8rem;
+}
+.small-wrapper .down-tip img{
+    width: 100%;
+}

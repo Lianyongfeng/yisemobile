@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="wap-font-scale" content="no">
+    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <script src="../js/swiper-4.3.2.min.js"></script>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="../css/swiper-4.3.2.min.css">
+    <link rel="stylesheet" href="../css/magazine.css">
+    <title>Magazine</title>
+</head>
+<body>
+<div class="cover">
+    <div class="turn">
+        <img src="../img/change-logo.png" alt="">
+    </div>
+</div>
+<div class="magazine-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background: url('../img/magazine-bg.jpg') no-repeat center center;background-size: cover;width: 100%;height: 100%;"></div>
+        <div class="swiper-slide" style="background: url('../img/magazine-bg.jpg') no-repeat center center;background-size: cover;width: 100%;height: 100%;"></div>
+        <div class="swiper-slide" style="background: url('../img/magazine-bg.jpg') no-repeat center center;background-size: cover;width: 100%;height: 100%;"></div>
+        <div class="swiper-slide" style="background: url('../img/magazine-bg.jpg') no-repeat center center;background-size: cover;width: 100%;height: 100%;"></div>
+        <div class="swiper-slide" style="background: url('../img/magazine-bg.jpg') no-repeat center center;background-size: cover;width: 100%;height: 100%;"></div>
+        <div class="swiper-slide" style="background: url('../img/magazine-bg.jpg') no-repeat center center;background-size: cover;width: 100%;height: 100%;"></div>
+        <div class="swiper-slide" style="background: url('../img/magazine-bg.jpg') no-repeat center center;background-size: cover;width: 100%;height: 100%;"></div>
+        <div class="swiper-slide" style="background: url('../img/magazine-bg.jpg') no-repeat center center;background-size: cover;width: 100%;height: 100%;"></div>
+        <div class="swiper-slide" style="background: url('../img/magazine-bg.jpg') no-repeat center center;background-size: cover;width: 100%;height: 100%;"></div>
+        <div class="swiper-slide" style="background: url('../img/magazine-bg.jpg') no-repeat center center;background-size: cover;width: 100%;height: 100%;"></div>
+    </div>
+    <div class="magazine-button-prev"></div>
+    <div class="magazine-button-next"></div>
+    <div class="tip">
+        <div class="down">
+            <div class="top">
+                <div class="fork"><img src="../img/tip-fork.png" alt=""></div>
+                <div class="logo"><a href="../index.html"><img src="../img/tip-logo.png" alt=""></a></div>
+            </div>
+            <div class="footer">
+                <h6>SUMMER SPRING  - “ 2018 S  S ” </h6>
+                <br>
+                <p>
+                    1. “ FEEL THE NATURE ” ；<br>
+                    2. 回归本质－与自己更好的相处；<br>
+                    3. 用最自然的方式诠释服装风貌；<br>
+                    4. 奕色 - 独立不独于世 。<br>
+                    <br>
+                    <br>
+                    <span class="left">>Lookbook</span> <span class="right">>archive 2017SS 2018AW</span>
+                </p>
+            </div>
+        </div>
+        <div class="up">
+            <div class="logo"><a href="../index.html"><img src="../img/tip-logo.png" alt=""></a></div>
+            <div class="arrow"><img src="../img/tip-arrow.png" alt=""></div>
+        </div>
+    </div>
+    <div class="more-tip"><img src="../img/click-tip.png" alt=""></div>
+</div>
+<div class="small-wrapper">
+    <div class="small-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../img/magazine-small-bg.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../img/magazine-small-bg.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../img/magazine-small-bg.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../img/magazine-small-bg.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../img/magazine-small-bg.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../img/magazine-small-bg.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../img/magazine-small-bg.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../img/magazine-small-bg.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../img/magazine-small-bg.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../img/magazine-small-bg.jpg" alt=""></div>
+        </div>
+    </div>
+    <div class="small-left"></div>
+    <div class="small-right"></div>
+    <div class="down-tip"><img src="../img/down-tip.png" alt=""></div>
+</div>
+</body>
+<script>
+    // rem自动计算
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ?     'orientationchange' : 'resize',
+            recalc = function() {
+                var clientWidth = docEl.clientWidth;
+                if(!clientWidth) {
+                    return
+                }
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px'; };
+
+        if(!doc.addEventListener) {
+            return
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    }(document, window))
+    //web-font字体
+    $youziku.load("body", "616974c45ae147c3a800adb0ddff96f1", "PingFangSC");
+    $youziku.draw();
+    //遮盖层的控制
+    $(".cover").click(function () {
+        $(this).css("display","none")
+    })
+    //字体
+    $youziku.load("body", "616974c45ae147c3a800adb0ddff96f1", "PingFangSC");
+    $youziku.load(".small-wrapper p", "279f2bb546af4bb6bec75e924fe818d2", "PingFangSCM");
+    $youziku.draw();
+    //轮播
+    var magazineContainer = new Swiper('.magazine-container', {
+        autoHeight: true,
+        direction: 'vertical',
+        slidesPerView: 1,
+        loop:true,
+        loopedSlides:8,
+        navigation: {
+            nextEl: '.magazine-button-next',
+            prevEl: '.magazine-button-prev',
+        },
+        observer:true,
+        observeParents:true,
+    });
+    //tip显示隐藏
+    $(".arrow").click(function () {
+        $(".up").css("display","none")
+        $(".down").css("display","block")
+    })
+    $(".fork").click(function () {
+        $(".down").css("display","none")
+        $(".up").css("display","block")
+    })
+    //small显示隐藏
+    $(".more-tip").click(function () {
+        $(".more-tip").css("display","none")
+        $(".small-wrapper").css("display","flex")
+        var magazineSmall = new Swiper('.small-container', {
+            autoHeight: true,
+            direction: 'vertical',
+            slideToClickedSlide: true,
+            slidesPerView: 'auto',
+            loop:true,
+            loopedSlides:8,
+            navigation: {
+                nextEl: '.small-right',
+                prevEl: '.small-left',
+            },
+            observer:true,
+            observeParents:true,
+        });
+        magazineContainer.controller.control = magazineSmall;
+        magazineSmall.controller.control = magazineContainer;
+    })
+    $(".down-tip").click(function () {
+        $(".small-wrapper").css("display","none")
+        $(".more-tip").css("display","block")
+    })
+</script>
+</html>

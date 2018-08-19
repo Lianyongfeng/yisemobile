@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="wap-font-scale" content="no">
+    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <script src="../js/swiper-4.3.2.min.js"></script>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Investment</title>
+</head>
+<body>
+<div class="header">
+    <div class="menu">
+        <img src="../img/menu.png" alt="">
+    </div>
+    <div class="logo">
+        <a href="../index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+</div>
+<div class="menu-wrapper">
+    <div class="menu-content">
+        <div class="fork"><img src="../img/fork.png" alt=""></div>
+        <div class="menu-content-logo"><a href="../index.html"><img src="../img/logo.png" alt=""></a></div>
+        <div class="menu-nav">
+            <dl>
+                <dt>
+                    <a href="./about.html"><span>“</span>Who is Leserbie<span>”</span></a>
+                </dt>
+            </dl>
+            <dl>
+                <dt>
+                    <a href="###"><span>“</span>Lookbook<span>”</span></a>
+                </dt>
+
+                <dd>
+                    <a href="./lookbook.html">Lookbook</a>
+                </dd>
+                <dd>
+                    <a href="magazine.html" target="_blank">Magazine</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <a href="###" id="menu-nav-dt-active"><span class="menu-nav-spot-active">“</span>Store<span class="menu-nav-spot-active">”</span></a>
+                </dt>
+                <dd>
+                    <a href="./contact.html">商品列表</a>
+                </dd>
+                <dd>
+                    <a href="./investment.html">招商列表</a>
+                </dd>
+                <dd>
+                    <a href="./VIP.html">VIP</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <a href="./column.html"><span>“</span>Leserbie colunmn<span>”</span></a>
+                </dt>
+            </dl>
+            <dl>
+                <dt>
+                    <a href="./join.html"><span>“</span>Join us<span>”</span></a>
+
+                </dt>
+            </dl>
+        </div>
+    </div>
+    <div class="menu-wrapper-menu">
+        <img src="../img/menu.png" alt="">
+    </div>
+</div>
+<div class="investment-wrapper">
+    <div class="text-one">
+        <img src="../img/Investment-spot-left.png" alt="" class="spot-left">
+        <p>
+            奕色LESERBIE诞生于2013年，是广州易羽服饰有限公司旗下主力品牌。
+            品牌发展至今，已在全国开设多家品牌加盟店，遍布全国一二线城市的主要商圈。
+            自进入市场以来，以其实穿性和表现力兼具的风格，获取了众多稳定客群。
+        </p>
+    </div>
+    <div class="text-two">
+        <p>
+            未来，奕色将全面升级品牌战略,<br>
+            以入驻大型Shoppingmall与A类商场为重心，<br>
+            让品牌影响力逐渐扩大。
+        </p>
+        <img src="../img/Investment-spot-right.png" alt="" class="spot-right">
+    </div>
+    <div class="text-bg">
+        <div class="small"><img src="../img/investment-bg1.png" alt=""></div>
+        <div class="small"><img src="../img/investment-bg2.png" alt=""></div>
+        <div class="small"><img src="../img/investment-bg3.png" alt=""></div>
+        <div class="big"><img src="../img/investment-bg4.png" alt=""></div>
+    </div>
+    <div class="text-three">
+        <p>
+            如需了解更多详情您还可致电*<br>
+            加盟热线:020 89770195 客服热线:400 6600-785<br>
+            <br>
+            （工作时间/周一至周五 9:00-18:00)
+        </p>
+    </div>
+</div>
+</body>
+<script>
+    // rem自动计算
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ?     'orientationchange' : 'resize',
+            recalc = function() {
+                var clientWidth = docEl.clientWidth;
+                if(!clientWidth) {
+                    return
+                }
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px'; };
+
+        if(!doc.addEventListener) {
+            return
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    }(document, window))
+    //web-font字体
+    $youziku.load("body", "616974c45ae147c3a800adb0ddff96f1", "PingFangSC");
+    $youziku.load(".text-two", "56b0ab47966243e48150939bef66b1a2", "PingFangSCB");
+    $youziku.load(".text-three", "56b0ab47966243e48150939bef66b1a2", "PingFangSCB");
+    $youziku.draw();
+
+
+    //菜单显示隐藏
+    $(".menu>img").click(function () {
+        $("body").css('overflow-y', 'hidden')
+        $(".menu-wrapper").addClass("animated fadeInLeft").css({
+            "transform": "translateX(0%)",
+        })
+        $(".fork").click(function () {
+            $("body").css('overflow-y', 'auto')
+            $(".menu-wrapper").removeClass("animated fadeInLeft").css({
+                "transform": "translateX(100%)",
+            })
+        })
+    })
+    //二级导航的控制
+    $(".menu-nav dt").click(function () {
+        if($(this).nextAll("dd").css("display")=="none"){
+            $(this).parents("dl").siblings().children("dt").children("a").removeClass('menu-nav-dt-active').children("span").removeClass("menu-nav-spot-active").parents("a").parents("dt").nextAll("dd").slideUp()
+            $(this).children("a").addClass('menu-nav-dt-active').children("span").addClass("menu-nav-spot-active").parents("a").parents("dt").nextAll("dd").slideDown()
+        }else {
+            $(this).children("a").removeClass('menu-nav-dt-active').children("span").removeClass("menu-nav-spot-active").parents("a").parents("dt").nextAll("dd").slideUp()
+        }
+    })
+    $(".menu-nav dd a").click(function () {
+        $(this).addClass("menu-nav-dd-active")
+    })
+
+</script>
+</html>

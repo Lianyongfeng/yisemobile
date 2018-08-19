@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="wap-font-scale" content="no">
+    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <script src="../js/swiper-4.3.2.min.js"></script>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>About</title>
+</head>
+<body>
+<div class="header">
+    <div class="menu">
+        <img src="../img/menu.png" alt="">
+    </div>
+    <div class="logo">
+        <a href="../index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+</div>
+<div class="menu-wrapper">
+    <div class="menu-content">
+        <div class="fork"><img src="../img/fork.png" alt=""></div>
+        <div class="menu-content-logo"><a href="../index.html"><img src="../img/logo.png" alt=""></a></div>
+        <div class="menu-nav">
+            <dl>
+                <dt>
+                    <a href="./about.html" id="menu-nav-dt-active"><span class="menu-nav-spot-active">“</span>Who is Leserbie<span class="menu-nav-spot-active">”</span></a>
+                </dt>
+            </dl>
+            <dl>
+                <dt>
+                    <a href="###"><span>“</span>Lookbook<span>”</span></a>
+                </dt>
+
+                <dd>
+                    <a href="./lookbook.html">Lookbook</a>
+                </dd>
+                <dd>
+                    <a href="magazine.html" target="_blank">Magazine</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <a href="###"><span>“</span>Store<span>”</span></a>
+                </dt>
+                <dd>
+                    <a href="./contact.html">商品列表</a>
+                </dd>
+                <dd>
+                    <a href="./investment.html">招商列表</a>
+                </dd>
+                <dd>
+                    <a href="./VIP.html">VIP</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <a href="./column.html"><span>“</span>Leserbie colunmn<span>”</span></a>
+                </dt>
+            </dl>
+            <dl>
+                <dt>
+                    <a href="./join.html"><span>“</span>Join us<span>”</span></a>
+
+                </dt>
+            </dl>
+        </div>
+    </div>
+    <div class="menu-wrapper-menu">
+        <img src="../img/menu.png" alt="">
+    </div>
+</div>
+<div class="about-bg-wrapper">
+    <div class="about-space"></div>
+    <div class="about-bg">
+        <img src="../img/about-bg.jpg" alt="">
+    </div>
+</div>
+
+<div class="about-text">
+    <p>
+        奕色，是一个关注当下生活方式的设计型女装品牌。
+        以“轻简、随适、利落”为创作语言，从自然、生活和艺术中汲取美学灵感，为追求生活品质、对时尚敏感的独立现代女性提供更具实穿性与表现力的产品体验，并带来审美与情感上的共鸣。<br>
+        <br>
+        我们相信服装不止是外在的美，更应反映穿衣者的精神世界，借助服装，去表达更丰富、自信、真实的自己，呈现本源的美，即所谓“本色心生”。
+    </p>
+    <div class="about-text-border"></div>
+</div>
+</body>
+<script>
+    // rem自动计算
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ?     'orientationchange' : 'resize',
+            recalc = function() {
+                var clientWidth = docEl.clientWidth;
+                if(!clientWidth) {
+                    return
+                }
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px'; };
+
+        if(!doc.addEventListener) {
+            return
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    }(document, window))
+    //web-font字体
+    $youziku.load("body", "616974c45ae147c3a800adb0ddff96f1", "PingFangSC");
+    $youziku.draw();
+
+
+    //菜单显示隐藏
+    $(".menu>img").click(function () {
+        $("body").css('overflow-y', 'hidden')
+        $(".menu-wrapper").addClass("animated fadeInLeft").css({
+            "transform": "translateX(0%)",
+        })
+        $(".fork").click(function () {
+            $("body").css('overflow-y', 'auto')
+            $(".menu-wrapper").removeClass("animated fadeInLeft").css({
+                "transform": "translateX(100%)",
+            })
+        })
+    })
+    //二级导航的控制
+    $(".menu-nav dt").click(function () {
+        if($(this).nextAll("dd").css("display")=="none"){
+            $(this).parents("dl").siblings().children("dt").children("a").removeClass('menu-nav-dt-active').children("span").removeClass("menu-nav-spot-active").parents("a").parents("dt").nextAll("dd").slideUp()
+            $(this).children("a").addClass('menu-nav-dt-active').children("span").addClass("menu-nav-spot-active").parents("a").parents("dt").nextAll("dd").slideDown()
+        }else {
+            $(this).children("a").removeClass('menu-nav-dt-active').children("span").removeClass("menu-nav-spot-active").parents("a").parents("dt").nextAll("dd").slideUp()
+        }
+    })
+    $(".menu-nav dd a").click(function () {
+        $(this).addClass("menu-nav-dd-active")
+    })
+
+
+</script>
+</html>

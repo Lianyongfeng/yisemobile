@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="wap-font-scale" content="no">
+    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=bK5wYNrEhXvsg6VEeS0D9YDC9fdLwtXi"></script>
+    <script src="../js/swiper-4.3.2.min.js"></script>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Map</title>
+</head>
+<body>
+<div class="header">
+    <div class="menu">
+        <img src="../img/menu.png" alt="">
+    </div>
+    <div class="logo">
+        <a href="../index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+</div>
+<div class="menu-wrapper">
+    <div class="menu-content">
+        <div class="fork"><img src="../img/fork.png" alt=""></div>
+        <div class="menu-content-logo"><a href="../index.html"><img src="../img/logo.png" alt=""></a></div>
+        <div class="menu-nav">
+            <dl>
+                <dt>
+                    <a href="./about.html"><span>“</span>Who is Leserbie<span>”</span></a>
+                </dt>
+            </dl>
+            <dl>
+                <dt>
+                    <a href="###"><span>“</span>Lookbook<span>”</span></a>
+                </dt>
+
+                <dd>
+                    <a href="./lookbook.html">Lookbook</a>
+                </dd>
+                <dd>
+                    <a href="magazine.html" target="_blank">Magazine</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <a href="###" id="menu-nav-dt-active"><span class="menu-nav-spot-active">“</span>Store<span class="menu-nav-spot-active">”</span></a>
+                </dt>
+                <dd>
+                    <a href="./contact.html">商品列表</a>
+                </dd>
+                <dd>
+                    <a href="./investment.html">招商列表</a>
+                </dd>
+                <dd>
+                    <a href="./VIP.html">VIP</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <a href="./column.html"><span>“</span>Leserbie colunmn<span>”</span></a>
+                </dt>
+            </dl>
+            <dl>
+                <dt>
+                    <a href="./join.html"><span>“</span>Join us<span>”</span></a>
+
+                </dt>
+            </dl>
+        </div>
+    </div>
+    <div class="menu-wrapper-menu">
+        <img src="../img/menu.png" alt="">
+    </div>
+</div>
+<div class="map-wrapper">
+    <div class="map-title-wrapper">
+        <div class="map-title">广州和业广场</div>
+        <div class="map-title-right">
+            <span class="right-one">街店</span>
+            <span class="right-two">flagship store</span>
+        </div>
+    </div>
+    <div class="map-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="img-wrapper">
+                    <img src="../img/map-bg1.jpg" alt="">
+                </div>
+                <div class="img-wrapper">
+                    <img src="../img/map-bg2.jpg" alt="">
+                </div>
+                <div class="img-wrapper">
+                    <img src="../img/map-bg3.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img-wrapper">
+                    <img src="../img/map-bg1.jpg" alt="">
+                </div>
+                <div class="img-wrapper">
+                    <img src="../img/map-bg2.jpg" alt="">
+                </div>
+                <div class="img-wrapper">
+                    <img src="../img/map-bg3.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img-wrapper">
+                    <img src="../img/map-bg1.jpg" alt="">
+                </div>
+                <div class="img-wrapper">
+                    <img src="../img/map-bg2.jpg" alt="">
+                </div>
+                <div class="img-wrapper">
+                    <img src="../img/map-bg3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="map-text" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="text-just">地&nbsp;&nbsp;&nbsp;址</td>
+            <td>广州市荔湾区康王中路486号和业广场1层</td>
+        </tr>
+        <tr>
+            <td>联系电话</td>
+            <td>020-83738189</td>
+        </tr>
+        <tr>
+            <td>营业时间</td>
+            <td>11:00 - 22:00 / 节假日正常营业</td>
+        </tr>
+        <tr>
+            <td>其它信息</td>
+            <td>
+                -地铁：<br>
+                -有停车位详情请向我们工作人员咨询<br>
+                -接受中国银联卡、微信、支付宝。
+            </td>
+        </tr>
+
+    </table>
+    <div id="container"></div>
+</div>
+</body>
+<script>
+    // rem自动计算
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ?     'orientationchange' : 'resize',
+            recalc = function() {
+                var clientWidth = docEl.clientWidth;
+                if(!clientWidth) {
+                    return
+                }
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px'; };
+
+        if(!doc.addEventListener) {
+            return
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    }(document, window))
+    //web-font字体
+    $youziku.load("body", "616974c45ae147c3a800adb0ddff96f1", "PingFangSC");
+    $youziku.load(".map-title", "56b0ab47966243e48150939bef66b1a2", "PingFangSCB");
+    $youziku.draw();
+
+
+    //菜单显示隐藏
+    $(".menu>img").click(function () {
+        $("body").css('overflow-y', 'hidden')
+        $(".menu-wrapper").addClass("animated fadeInLeft").css({
+            "transform": "translateX(0%)",
+        })
+        $(".fork").click(function () {
+            $("body").css('overflow-y', 'auto')
+            $(".menu-wrapper").removeClass("animated fadeInLeft").css({
+                "transform": "translateX(100%)",
+            })
+        })
+    })
+    //二级导航的控制
+    $(".menu-nav dt").click(function () {
+        if($(this).nextAll("dd").css("display")=="none"){
+            $(this).parents("dl").siblings().children("dt").children("a").removeClass('menu-nav-dt-active').children("span").removeClass("menu-nav-spot-active").parents("a").parents("dt").nextAll("dd").slideUp()
+            $(this).children("a").addClass('menu-nav-dt-active').children("span").addClass("menu-nav-spot-active").parents("a").parents("dt").nextAll("dd").slideDown()
+        }else {
+            $(this).children("a").removeClass('menu-nav-dt-active').children("span").removeClass("menu-nav-spot-active").parents("a").parents("dt").nextAll("dd").slideUp()
+        }
+    })
+    $(".menu-nav dd a").click(function () {
+        $(this).addClass("menu-nav-dd-active")
+    })
+    //轮播图
+    var mySwiper = new Swiper('.map-swiper', {
+        slidesPerView:"auto",
+        spaceBetween:5,
+        observer:true,
+        observeParents:true,
+    });
+    //地图
+    var map = new BMap.Map("container");
+    var point = new BMap.Point(113.25414,23.128048);
+    map.centerAndZoom(point,18);
+    var marker = new BMap.Marker(point);
+    map.addOverlay(marker);
+    // var opts = {
+    //     width :100,
+    //     height:20,
+    // }
+    // var infoWindow = new BMap.InfoWindow("奕色(和业广场店)", opts);
+    // map.openInfoWindow(infoWindow, map.getCenter());
+    // marker.addEventListener("click", function(){
+    //     map.openInfoWindow(infoWindow,point); //开启信息窗口
+    // });
+
+
+
+
+</script>
+</html>
